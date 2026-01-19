@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artify – Online Art Gallery and Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Artify</h1>
+    <p>Online Art Gallery and Marketplace</p>
+
+    <button id="darkModeBtn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#artists">Artists</a>
+    <a href="#contact">Commission</a>
+</nav>
+
+<section id="about">
+    <h2>About Artify</h2>
+
+    <p>
+        Artify is an online art gallery and marketplace created to celebrate, support,
+        and promote Filipino artists in the digital space. The platform provides artists
+        with an opportunity to showcase their talents, share their stories, and connect
+        with a broader audience without the limitations of physical galleries.
+    </p>
+
+    <p>
+        The gallery features a wide range of artworks, including digital illustrations,
+        paintings, and traditional art forms inspired by Filipino culture, heritage, and
+        everyday life. Each artwork represents the creativity, passion, and unique
+        perspective of its artist, making Artify a diverse and vibrant creative hub.
+    </p>
+
+    <p>
+        Artify also serves as a marketplace where art lovers, collectors, and clients can
+        discover artists and commission custom artworks. Through this platform, artists
+        are given more opportunities to gain recognition, earn from their work, and build
+        their creative careers.
+    </p>
+
+    <p>
+        In addition to showcasing art, Artify aims to foster a strong creative community.
+        It encourages collaboration, appreciation of local talent, and cultural exchange
+        between artists and audiences. By using technology as a bridge, Artify makes art
+        more accessible while preserving the identity and stories behind each creation.
+    </p>
+
+    <p>
+        Artify believes that art has the power to inspire, communicate, and connect people.
+        Through this platform, we envision a future where Filipino creativity is widely
+        recognized, valued, and celebrated both locally and globally.
+    </p>
+</section>
+
+
+<section id="gallery">
+    <h2>Art Gallery</h2>
+
+    <input type="text" id="searchArt" placeholder="Search artwork or artist..." onkeyup="searchArt()">
+
+
+    <div class="categories">
+        <button onclick="filterArt('all')">All</button>
+        <button onclick="filterArt('digital')">Digital</button>
+        <button onclick="filterArt('traditional')">Traditional</button>
+    </div>
+
+    <div class="gallery">
+        <div class="art-box digital">
+    <img src="image/art1.jpg" onclick="openImage(this)">
+    <p class="title">Sunset Dreams</p>
+    <p class="artist">By Juan Dela Cruz</p>
+    <p class="price">₱3,500</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Sunset Dreams', 3500)">Add to Cart</button>
+</div>
+
+<div class="art-box traditional">
+    <img src="image/art2.jpg" onclick="openImage(this)">
+    <p class="title">Island Life</p>
+    <p class="artist">By Maria Santos</p>
+    <p class="price">₱4,200</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Island Life', 4200)">Add to Cart</button>
+</div>
+
+<div class="art-box digital">
+    <img src="image/art3.jpg" onclick="openImage(this)">
+    <p class="title">Modern Culture</p>
+    <p class="artist">By Pedro Reyes</p>
+    <p class="price">₱3,800</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Modern Culture', 3800)">Add to Cart</button>
+</div>
+
+<div class="art-box traditional">
+    <img src="image/art4.jpg" onclick="openImage(this)">
+    <p class="title">Fiesta Colors</p>
+    <p class="artist">By Ana Cruz</p>
+    <p class="price">₱4,500</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Fiesta Colors', 4500)">Add to Cart</button>
+</div>
+
+<div class="art-box digital">
+    <img src="image/art5.jpg" onclick="openImage(this)">
+    <p class="title">City Lights</p>
+    <p class="artist">By Mark Villanueva</p>
+    <p class="price">₱3,200</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('City Lights', 3200)">Add to Cart</button>
+</div>
+
+<div class="art-box traditional">
+    <img src="image/art6.jpg" onclick="openImage(this)">
+    <p class="title">Rural Life</p>
+    <p class="artist">By Liza Mendoza</p>
+    <p class="price">₱4,000</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Rural Life', 4000)">Add to Cart</button>
+</div>
+
+<div class="art-box digital">
+    <img src="image/art7.jpg" onclick="openImage(this)">
+    <p class="title">Neon Traditions</p>
+    <p class="artist">By Carlo Navarro</p>
+    <p class="price">₱3,900</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Neon Traditions', 3900)">Add to Cart</button>
+</div>
+
+<div class="art-box traditional">
+    <img src="image/art8.jpg" onclick="openImage(this)">
+    <p class="title">Golden Fields</p>
+    <p class="artist">By Rosa Lim</p>
+    <p class="price">₱4,700</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Golden Fields', 4700)">Add to Cart</button>
+</div>
+
+<div class="art-box digital">
+    <img src="image/art9.jpg" onclick="openImage(this)">
+    <p class="title">Urban Pulse</p>
+    <p class="artist">By Daniel Flores</p>
+    <p class="price">₱3,600</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Urban Pulse', 3600)">Add to Cart</button>
+</div>
+
+<div class="art-box traditional">
+    <img src="image/art10.jpg" onclick="openImage(this)">
+    <p class="title">Quiet Shores</p>
+    <p class="artist">By Elena Bautista</p>
+    <p class="price">₱4,300</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Quiet Shores', 4300)">Add to Cart</button>
+</div>
+
+<div class="art-box digital">
+    <img src="image/art11.jpg" onclick="openImage(this)">
+    <p class="title">Aurora Dreams</p>
+    <p class="artist">By Elisa Mendoza</p>
+    <p class="price">₱4,700</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Aurora Dreams', 4700)">Add to Cart</button>
+</div>
+
+<div class="art-box traditional">
+    <img src="image/art12.jpg" onclick="openImage(this)">
+    <p class="title">Morning Serenity</p>
+    <p class="artist">By Ramon Gutierrez</p>
+    <p class="price">₱3,900</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Morning Serenity', 3900)">Add to Cart</button>
+</div>
+
+<div class="art-box digital">
+    <img src="image/art13.jpg" onclick="openImage(this)">
+    <p class="title">Cyber Skies</p>
+    <p class="artist">By Felicia Tan</p>
+    <p class="price">₱5,200</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Cyber Skies', 5200)">Add to Cart</button>
+</div>
+
+<div class="art-box traditional">
+    <img src="image/art14.jpg" onclick="openImage(this)">
+    <p class="title">Countryside Bliss</p>
+    <p class="artist">By Javier Ramos</p>
+    <p class="price">₱4,100</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Countryside Bliss', 4100)">Add to Cart</button>
+</div>
+
+<div class="art-box digital">
+    <img src="image/art15.jpg" onclick="openImage(this)">
+    <p class="title">Urban Glow</p>
+    <p class="artist">By Naomi Cruz</p>
+    <p class="price">₱4,500</p>
+    <button class="like-btn" onclick="likeArt(this)">❤️ Like</button>
+    <button class="cart-btn" onclick="addToCart('Urban Glow', 4500)">Add to Cart</button>
+</div>
+
+
+
+    </div>
+</section>
+
+<section id="artists">
+    <h2>Featured Artists</h2>
+
+    <div class="artist-card">
+        <h3>Juan Dela Cruz</h3>
+        <p>Digital artist specializing in modern Filipino themes.</p>
+    </div>
+
+    <div class="artist-card">
+        <h3>Maria Santos</h3>
+        <p>Traditional painter inspired by Filipino life and landscapes.</p>
+    </div>
+
+    <div class="artist-card">
+        <h3>Carlo Navarro</h3>
+        <p>Digital illustrator known for vibrant colors and urban culture.</p>
+    </div>
+
+    <div class="artist-card">
+        <h3>Rosa Lim</h3>
+        <p>Traditional artist focusing on rural scenery and nature.</p>
+    </div>
+
+    <div class="artist-card">
+        <h3>Elena Bautista</h3>
+        <p>Mixed-media artist blending contemporary and cultural elements.</p>
+    </div>
+</section>
+
+
+<section id="contact">
+    <h2>Commission an Artist</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Describe your commission request" required></textarea>
+        <button type="submit">Send Request</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Artify | Promoting Filipino Art and Culture</p>
+</footer>
+
+<!-- Image Modal -->
+<div id="imageModal" onclick="closeImage()">
+    <img id="modalImg">
+</div>
+
+<script src="script.js"></script>
+
+<div id="cart">
+    <h3>🛒 Shopping Cart</h3>
+    <ul id="cartItems"></ul>
+    <p>Total: ₱<span id="cartTotal">0</span></p>
+    <button onclick="checkout()">Checkout</button>
+</div>
+
+
+</body>
+</html>
